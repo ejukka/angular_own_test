@@ -21,7 +21,7 @@ object Application extends Controller {
     Ok(views.html.shopping.hello("asdf"))
   }
   
-   def hello2 = Action {
+   def blog = Action {
     Ok(views.html.main.apply)
   }
 
