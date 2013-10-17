@@ -1,0 +1,47 @@
+@(message: String)
+
+<html ng-app>
+<head>
+<link rel="stylesheet" href="@routes.Assets.at("bootstrap/css//bootstrap.css")">
+<link rel="stylesheet" href="@routes.Assets.at("bootstrap/css/bootstrap-responsive.css")">
+</head>
+<title>Blog</title>
+</head>
+<body>
+	<h1>Blog</h1>
+	<ul ng-controller='StudentListController'>
+		<li ng-repeat='student in students'><a
+			ng-href='{{student.url}}'>{{student.name}}</a></li>
+	</ul>
+	<img src="@routes.Assets.at("images/dreamland.jpg")" type="image" alt="">
+	<script src="@routes.Assets.at("javascripts/lib/angular/angular.min.js")" type="text/javascript"></script>
+	<script>
+		var students = [ {
+			name : 'AngularJS',
+			url: 'http://getbootstrap.com/2.3.2/',
+			id : '1'
+		}, {
+			name : 'play 2.1',
+			url: 'http://getbootstrap.com/2.3.2/',
+			id : '2'
+		}, {
+			name : 'Bootstrap - http://getbootstrap.com/2.3.2/',
+			url: 'http://getbootstrap.com/2.3.2/',
+			id : '3'
+		}, {
+			name : 'Scala',
+			url: 'http://getbootstrap.com/2.3.2/',
+			id : '4'
+		}, {
+			name : 'LESS',
+			url: 'http://getbootstrap.com/2.3.2/',
+			id : '5'
+		} ];
+
+		function StudentListController($scope) {
+			$scope.students = students;
+		}
+	</script>
+	<p> test <a href="main.scala.html">main</a></p>
+</body>
+</html>
